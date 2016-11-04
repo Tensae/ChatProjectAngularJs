@@ -1,0 +1,11 @@
+﻿<button type="button"
+        class="btn"
+        ng-class="{ 'btn-success': !subscribed,
+                    'disabled': subscribed,
+                    'btn-default': subscribed }">
+    <span class="glyphicon"
+          ng-class="{ 'glyphicon-thumbs-up': !subscribed,
+                      'glyphicon-ok': subscribed }"></span>
+    <span ng-show="!subscribed"> Like</span>
+    <span ng-show="subscribed"> Added to favorites</span>
+</button>

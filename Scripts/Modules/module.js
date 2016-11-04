@@ -1,5 +1,5 @@
 ﻿/// <reference path="../angular.js" />
 
-angular.module("mainModule", [
+angular.module("chatModule", [
     "ngRoute"
 ]);

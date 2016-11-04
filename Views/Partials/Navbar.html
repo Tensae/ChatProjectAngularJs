@@ -1,4 +1,5 @@
-﻿<nav class="navbar navbar-inverse no-whitespace">
+﻿<!--<div class="navheader">
+<nav class="navbar navbar-inverse no-whitespace">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -6,16 +7,36 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">AngularBaseApp</a>
+            <a class="navbar-brand" href="#">Wel Come To Chat Room</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li ng-class="{active: $route.current.activeTab == 'Home'}"><a href="/">Home</a></li>
+                <li ng-class="{active: $route.current.activeTab == 'Home'}"><a href="/">Topics</a></li>
+                <li ng-class="{active: $route.current.activeTab == 'Favorites'}"><a href="/Favorites">Favorites</a></li>
+                <li ng-class="{active: $route.current.activeTab == 'Admin'}"><a href="/Admin">Admin</a></li>
             </ul>
-            <!--<ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>-->
-        </div>
-    </div>
-</nav>
+
+                </div>
+    </div>-->
+<div class="container-fluid-">
+    <!--<div class="container-fluid">-->
+    <!--<div class="navbar-s">-->
+    <ul class="nav nav-tabs">
+        <li ><a href="/">Home</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="/">Topics<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li class="channelname" ng-repeat="channel in models.channels track by $index">
+                    <a href="/Channels/{{channel.id}}">{{channel.name}}</a>
+                </li>
+
+                <!--<li ng-repeat="channel in models.channels track by $index"  ng-click="go('/Channels/'+channel.id)">{{channel.name}}</li>-->
+                <!--<a href="/Channels/' + channel.id">{{channel.name}}</a></li>-->
+            </ul>
+        </li>
+        <li><a href="/Favorites">Favorites</a></li>
+        <li><a href="/Admin">Admin</a></li>
+    </ul>
+</div>
+
+

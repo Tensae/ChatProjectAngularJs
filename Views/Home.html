@@ -1,3 +1,28 @@
-﻿<div class="col-md-12">
-    <h1 ng-bind="title"></h1>
+﻿<div id="right">
+    <p>Wel Come to Chat Group</p>
 </div>
+<div class="col-md-12">
+    <table class="table1" align="center" >
+        <tr>
+            <th id="hh">Topic Titles</th>
+        </tr>
+        <tr class="table1tr" ng-repeat="channel in models.channels track by $index">
+
+            <td>
+                <button type="button"
+                        class="btn btn-primary"
+                        ng-click="go('/Channels/' + channel.id)">
+                    {{channel.name}}
+                </button>
+            <button>
+                <subscribe-button ng-model="channel.subscribed"
+                                  ng-click="subscribe(channel.id)">
+                </subscribe-button>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+   

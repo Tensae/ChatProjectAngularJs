@@ -1,9 +1,18 @@
 ﻿/// <reference path="../angular.js" />
 
-angular.module("mainModule")
+angular.module("chatModule")
     .controller("HomeController", [
         "$scope",
-        function ($scope) {
+        "$http",
+        "$routeParams",
+        "channelsApi",
+        "messagesApi",
+        
+        function ($scope, $http, channelsApi, messagesApi, $routeParams) {
             $scope.title = "Home";
+
+           
+           
+            
         }
     ]);
